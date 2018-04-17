@@ -153,11 +153,11 @@ class PingdomCheck(object):
                     self.type = checkinfo[key]
                 else:
                     # Take key from type dict, convert to string for type
-                    self.type = checkinfo[key].iterkeys().next()
+                    self.type = checkinfo[key].keys().next()
 
                     # Take value from type dict, store to member of new attrib
                     object.__setattr__(self, self.type,
-                                       checkinfo[key].itervalues().next())
+                                       checkinfo[key].values().next())
             else:
                 # Store other key value pairs as attributes
                 object.__setattr__(self, key, checkinfo[key])
