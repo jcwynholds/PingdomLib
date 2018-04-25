@@ -462,7 +462,7 @@ class Pingdom(object):
                                'notifywhenbackup', 'type', 'hostname', 'url',
                                'encryption', 'port', 'auth', 'shouldcontain',
                                'shouldnotcontain', 'postdata',
-                               'use_legacy_notifications']:
+                               'use_legacy_notifications', 'tags', 'integrationids']:
                     if key.startswith('requestheader') is not True:
                         sys.stderr.write("'%s'" % key + ' is not a valid ' +
                                          'argument of newCheck() for type ' +
